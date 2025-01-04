@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #E5EEFF;
+}
+
+/* Estilos de navegación */
+.nav-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.logo-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  width: 160px;
+  height: auto;
+  object-fit: contain;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.phone {
+  font-size: 1rem;
+  color: #333;
+}
+
+.button-now {
+  background-color: #ff8a8a;
+  padding: 20px 40px;
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.button-now:hover {
+  background-color: #b3c7ff;
+  color: #030303;
+  transform: scale(1.05);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 15px 20px;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .button-now {
+    width: 100%; /* Asegura que el botón ocupe todo el ancho en pantallas pequeñas */
+    padding: 12px; /* Reduce ligeramente el padding */
+    font-size: 1rem; /* Ajusta el tamaño de la fuente */
+    text-align: center; /* Centra el texto dentro del botón */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  .button-now {
+    padding: 10px; /* Ajuste adicional para pantallas muy pequeñas */
+    font-size: 0.9rem; /* Ajusta el tamaño de la fuente para mejor visibilidad */
+  }
+}
+
+/* Para pantallas extremadamente pequeñas (menos de 320px) */
+@media (max-width: 320px) {
+  .nav-link {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  .button-now {
+    padding: 8px; /* Reduce aún más el padding */
+    font-size: 0.8rem;
+  }
+
+  .logo {
+    width: 80px;
+  }
+}
+

@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+.session-section {
+  background-color: #fff;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  align-items: center; /* Alinear verticalmente el contenido */
+  justify-content: center; /* Centrar el contenido horizontalmente */
+  flex-wrap: wrap; /* Permitir que los elementos se envuelvan en pantallas pequeñas */
+}
+
+.main-image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  margin-right: 200px; /* Aumentar el margen a la derecha de la imagen */
+  margin-left: -100px; /* Mover la imagen más a la izquierda */
+}
+
+.text-section {
+  max-width: 500px; /* Establece un ancho máximo para el texto */
+  text-align: left; /* Alinea el texto a la izquierda */
+  margin-left: 60px; /* Mueve el texto un poco a la derecha */
+}
+
+.session-section h1 {
+  color: #000000;
+  font-size: 2.5rem; /* Tamaño de fuente más grande */
+  font-family: 'Itim', cursive;
+  margin-bottom: 40px;
+}
+
+.session-section h3 {
+  color: #000000;
+  font-size: 2.5rem; /* Tamaño de fuente más grande */
+  font-family: 'Itim', cursive;
+  margin-bottom: 30px;
+}
+
+.session-section h2 {
+  color: #222121;
+  font-size: 1.5em;
+  font-family: 'Itim', cursive;
+  margin-bottom: 10px;
+}
+
+.highlights {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.highlight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px; /* Ajusta el tamaño de la tarjeta */
+  padding: 20px;
+  background-color: #e6f1ff; /* Fondo de color suave */
+  border-radius: 20px; /* Bordes redondeados */
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.highlight:hover {
+  background-color: #ff8a8a; /* Cambia el fondo al hacer hover */
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño al hacer hover */
+}
+
+.highlight img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.highlight p {
+  font-size: 0.9em;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}
+
+.header-icon {
+  width: 140px; /* Tamaño del ícono */
+  height: 100px; /* Tamaño del ícono */
+  margin: -0px auto 20px; /* Baja el ícono más abajo */
+  display: block; /* Asegúrate de que el ícono se comporta como un bloque para centrarse */
+}
+
+.cat-survey {
+  display: flex;                 
+  justify-content: center;       
+  align-items: flex-end;         
+  margin: 0;                    
+  padding: 0;                   
+  height: 400px;                
+  overflow: hidden;             
+}
+
+.imageSession {
+  width: auto;                   
+  height: 400px;                 
+  object-fit: contain;           
+  border-radius: 0;             
+  box-shadow: none;              
+  margin: 0;                    
+  padding: 0;                    
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column; /* Cambiar a columna cuando se reduzca el tamaño */
+    align-items: center; /* Centrar los elementos */
+  }
+
+  .header-icon {
+    visibility: hidden; /* Hace el icono invisible pero conserva su espacio */
+  }
+
+  .main-image {
+    margin-right: 0; /* Elimina margen a la derecha en pantallas pequeñas */
+    margin-left: 0; /* Elimina margen a la izquierda en pantallas pequeñas */
+    max-width: 80%; /* Cambia el tamaño máximo de la imagen */
+  }
+
+  .text-section {
+    margin-left: 0; /* Elimina margen izquierdo */
+    max-width: 100%; /* Permite que el texto ocupe todo el ancho disponible */
+    margin-left:20px;
+    margin-right: 20px;
+  }
+
+  .session-section h1,
+  .session-section h3 {
+    font-size: 2rem; /* Reduce el tamaño de fuente en pantallas pequeñas */
+    margin-bottom: 20px; /* Reduce el espacio debajo de los títulos */
+  }
+
+  .highlights {
+    gap: 20px; /* Reduce el espacio entre las tarjetas */
+  }
+
+  .highlight {
+    width: 80px; /* Reduce el ancho de las tarjetas en pantallas pequeñas */
+    padding: 15px; /* Ajusta el padding */
+  }
+
+  .highlight img {
+    width: 30px; /* Reduce el tamaño de las imágenes en las tarjetas */
+    height: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    flex-direction: column; /* Asegura que los elementos se alineen verticalmente */
+    align-items: center;
+  }
+
+  .session-section h1,
+  .session-section h3 {
+    font-size: 1.5rem; /* Reduce aún más el tamaño de fuente */
+    margin-bottom: 15px; /* Ajusta el margen debajo del título */
+  }
+
+  .highlight {
+    width: 60px; /* Ajustar tamaño aún más */
+    padding: 10px; /* Ajustar padding */
+  }
+
+  .highlight img {
+    width: 25px; /* Reducir tamaño de las imágenes de las tarjetas */
+    height: 25px;
+  }
+
+  .text-section,
+  .main-image {
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+@media (max-width: 320px) {
+  .session-section h1,
+  .session-section h3 {
+    font-size: 1.2rem; /* Tamaño de fuente reducido para pantallas muy pequeñas */
+    margin-bottom: 10px; /* Reducir el espacio debajo del título */
+  }
+
+  .highlight {
+    width: 50px; /* Ajustar tamaño de tarjeta para pantallas muy pequeñas */
+    padding: 8px;
+  }
+
+  .highlight img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+
+
+
